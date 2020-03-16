@@ -23,5 +23,6 @@
 1. Add the tofu slices
 1. Add vinegar
 1. Bring to boil and put a lot of white peper and some soysauce
-1. Boil until everything is soft 
-1. Beat the eggs and stir it in the soup and turn off the fire 
+1. Boil until everything is soft
+1. Beat the eggs and stir it in the soup and turn off the fire
+1. yumyum...
