@@ -1,20 +1,13 @@
-# Five spices tofu
+# List of recipes
 
-## Ingredients
-
-* Tofu
-* Spring onions
-* Ginger
-* Chilis
-* 3 Garlic
-* 3 Star anise
-
-## Steps
-
-1. Cut tofu to cubes
-1. Fried them in the pan till all sides are golden. (add some oil of course)
-1. Slice spring onions, ginger, chilis and crushed garlics
-1. Fried everything, and 3 star anise, in the pan till it smells good
-1. Add soy sauce, five spices powder and a little bit of sugar and water
-1. Cook for 5 mins till the water dries up
-1. Yumyum...
+- [Broad bean eggplant](broad-bean-eggplant/)
+- [Chinese cabbage stew](chinese-cabbage-stew/)
+- [Cold vinegar lotus roots](cold-vinegar-lotus-roots)
+- [Five spice tofu](five-spice-tofu)
+- [Red bean rice cake](red-bean-rice-cake/)
+- [Salted eggs with bitter melon](salted-eggs-with-bitter-melon/)
+- [Sauerkraut hotpot](sauerkraut-hotpot/)
+- [Spicy cucumber](spicy-cucumber/)
+- [Spicy sour soup](spicy-sour-soup/)
+- [Spring onion pancakes](spring-onion-pancakes)
+- [Taiwanese tea egg](taiwanese-tea-egg)
