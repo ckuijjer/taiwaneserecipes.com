@@ -26,3 +26,5 @@
 1. Boil until everything is soft
 1. Beat the eggs and stir it in the soup and turn off the fire
 1. yumyum...
+
+![](IMG_5499.jpeg)
