@@ -1,4 +1,4 @@
-# Taiwanese tea egg 
+# Taiwanese tea egg
 
 ## Ingredients
 
@@ -9,7 +9,6 @@
 - Sichuan pepper
 - Brown sugar
 
-
 ## Steps
 
 1. Boil the eggs until well done(more than 10 mins)
@@ -18,3 +17,5 @@
 1. Cool the eggs and break the shell gently with a spoon
 1. Soak the eggs into the sauce mix and put them in frige for a night
 1. Stir once in a while to make sure all the eggs are soaked
+
+![](IMG_4845.jpeg)
