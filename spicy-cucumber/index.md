@@ -12,3 +12,10 @@
 
 1. Cut the cucumber, remove the middle parts
 1. Mix salt and cucumbers and wait for 20 mins to dehydrate the cucumber
+
+![](IMG_9870.JPG)
+![](IMG_3128.JPG)
+![](IMG_2394.JPG)
+![](IMG_6448.JPG)
+![](IMG_5096.jpeg)
+![](IMG_5097.jpeg)
