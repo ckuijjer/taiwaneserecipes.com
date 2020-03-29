@@ -16,7 +16,7 @@
 1. Take off the garlics peel by crushing it with a big knife and then chop it into coarse pieces
 1. Mix in the garlic, chili flakes and vinegar
 1. Stir them well and put them in a closed container\
-   _Tip: Use a wide container to make sure all cucumber are soaked in the sauce_
+  _Tip: Use a wide container to make sure all cucumber are soaked in the sauce_
 1. Put the container in the fridge and stir once in a while
 1. After one day, enjoy the tasty spicy cucumber!
 
