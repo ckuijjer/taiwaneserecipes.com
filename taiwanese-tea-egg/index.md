@@ -18,10 +18,10 @@
 1. Cool the eggs and break the shell gently with a spoon
 1. Put the eggs into the tea sauce mix, make sure the eggs are mostly covered. Add water if the sauce is not enough
 1. Bring to boil and cook on low fire for 15 mins. Or put in rice cooker and add a cup of water next to it.
-1. Let cool and put them in frige for one night
+1. Let cool and put them in frige for at least one night
 1. If necessary stir once in a while to make sure all the eggs are soaked
 1. Tea eggs can be served cold with a more bouncy texture of the egg 
-1. Or serve in warm by heating the eggs together with the sauce and enjoy the fragrant tea flavor
+1. Or heat the eggs together with the sauce and enjoy the fragrant tea flavor
 
 ![](IMG_4845.jpeg)
 ![](IMG_5506.jpeg)
