@@ -8,7 +8,7 @@
 - Cilantro
 - Vinegar
 - Salt
-- Sesame oil
+- ½ teaspoon of Sesame oil
 
 ## Steps
 
@@ -19,7 +19,7 @@
 1. Chop the chilis, garlic & cilantro
 1. Bring a large pot of water to a boil and cook the slices for 1 min
 1. Take out the slices and soak them in cold water until completely cooled
-1. Remove the water, mix in the spices, 2 tablespoon of vinegar, a pinch of salt and some sesame oil  
+1. Remove the water, mix in the spices, 2 tablespoon of vinegar, a pinch of salt and ½ teaspoon sesame oil  
 1. Mix well and let cooled in the fridge
 1. Stir once in a while and ready to serve in 2-3 hours
 
