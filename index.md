@@ -2,7 +2,7 @@
 
 - [Broad bean eggplant](broad-bean-eggplant/)
 - [Chinese cabbage stew](chinese-cabbage-stew/)
-- [Cold vinegar lotus roots](cold-vinegar-lotus-roots)
+- [Cold vinegar lotus roots](cold-vinegar-lotus-roots) (Ready)
 - [Five spice tofu](five-spice-tofu)
 - [Red bean rice cake](red-bean-rice-cake/)
 - [Salted eggs with bitter melon](salted-eggs-with-bitter-melon/)
