@@ -4,7 +4,7 @@
 
 - 1 Cucumber
 - 1 teaspoon Chili flakes
-- 3 toes Garlic
+- 3 cloves of Garlic
 - 30ml Apple Vinegar (or regular vinegar with some sugar)
 - ½ teaspoon Salt
 
