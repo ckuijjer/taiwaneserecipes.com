@@ -14,7 +14,7 @@
 
 ## Steps
 
-1. Cut tofu to 2cm cubes 
+1. Cut tofu to 2cm cubes
 1. Heat up a pan with oil, fried them till all sides are golden
 1. Take out and rest them on a plate
 1. Chop spring onions into 4cm parts, ginger in 2mm slices, chilis in small rings and crushed garlics
