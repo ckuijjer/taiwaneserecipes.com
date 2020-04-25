@@ -20,8 +20,17 @@
 1. Bring to boil and cook on low fire for 15 mins. Or put in rice cooker and add a cup of water next to it.
 1. Let cool and put them in frige for at least one night
 1. If necessary stir once in a while to make sure all the eggs are soaked
-1. Tea eggs can be served cold with a more bouncy texture of the egg 
+1. Tea eggs can be served cold with a more bouncy texture of the egg
 1. Or heat the eggs together with the sauce and enjoy the fragrant tea flavor
 
+![](IMG_5365.jpeg)
+![](IMG_5366.jpeg)
+![](IMG_5367.jpeg)
+![](IMG_5368.jpeg)
+![](IMG_5369.jpeg)
+![](IMG_5370.jpeg)
+![](IMG_5371.jpeg)
+![](IMG_5372.jpeg)
+![](IMG_5373.jpeg)
 ![](IMG_4845.jpeg)
 ![](IMG_5506.jpeg)
