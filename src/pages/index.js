@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import RecipeCard from '../components/RecipeCard'
 
