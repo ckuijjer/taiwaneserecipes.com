@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: 'recipes',
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Rijstplanner`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -52,6 +52,14 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    `gatsby-plugin-material-ui`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`roboto`],
+        display: 'swap',
       },
     },
   ],

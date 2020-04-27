@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import Typography from '@material-ui/core/Typography'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+import SEO from '../components/Seo'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -31,10 +31,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <Typography variant="h2" component="h1" color="secondary">
+        Recipes
+      </Typography>
       <ul>
         {recipes.map(({ slug, title }) => (
           <li>
-            <Link to={slug}>{title}</Link>
+            <Typography variant="body1">
+              <Link to={slug}>{title}</Link>
+            </Typography>
           </li>
         ))}
       </ul>
