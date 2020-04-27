@@ -1,14 +1,16 @@
 import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
 
 import Layout from '../components/layout'
 import SEO from '../components/Seo'
+import RecipeCard from '../components/RecipeCard'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(limit: 1000, sort: { fields: fields___slug }) {
         edges {
           node {
             headings(depth: h1) {
@@ -16,6 +18,22 @@ const IndexPage = () => {
             }
             fields {
               slug
+            }
+            frontmatter {
+              featuredImage {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              images {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }
@@ -25,24 +43,33 @@ const IndexPage = () => {
 
   const recipes = data.allMarkdownRemark.edges.map(({ node }) => ({
     title: node.headings[0].value,
-    slug: node.fields.slug,
+    path: node.fields.slug,
+    image:
+      (node &&
+        node.frontmatter &&
+        node.frontmatter.featuredImage &&
+        node.frontmatter.featuredImage.childImageSharp &&
+        node.frontmatter.featuredImage.childImageSharp.fluid) ||
+      (node &&
+        node.frontmatter &&
+        node.frontmatter.images &&
+        node.frontmatter.images[0].childImageSharp &&
+        node.frontmatter.images[0].childImageSharp.fluid),
   }))
 
   return (
     <Layout>
       <SEO title="Home" />
-      <Typography variant="h2" component="h1" color="secondary">
+      <Typography variant="h2" component="h1" color="secondary" gutterBottom>
         Recipes
       </Typography>
-      <ul>
-        {recipes.map(({ slug, title }) => (
-          <li>
-            <Typography variant="body1">
-              <Link to={slug}>{title}</Link>
-            </Typography>
-          </li>
+      <Grid container spacing={2}>
+        {recipes.map((props) => (
+          <Grid item xs={12} md={4} key={props.path}>
+            <RecipeCard {...props} />
+          </Grid>
         ))}
-      </ul>
+      </Grid>
     </Layout>
   )
 }

@@ -1,7 +1,10 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import rehypeReact from 'rehype-react'
 import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
 
 import Layout from '../components/Layout'
 
@@ -24,11 +27,6 @@ const Li = ({ children }) => (
   </li>
 )
 
-const Img = (props) => {
-  console.log('🏙', props)
-  return <img {...props} />
-}
-
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
@@ -39,12 +37,33 @@ const renderAst = new rehypeReact({
   },
 }).Compiler
 
+const Images = ({ images = [] }) => {
+  return (
+    <Grid container spacing={2}>
+      {images.map((image) => (
+        <Grid item xs={12} md={4} key={image.childImageSharp.fluid.src}>
+          <Paper style={{ overflow: 'hidden' }}>
+            <Img fluid={image.childImageSharp.fluid} durationFadeIn={100} />
+          </Paper>
+        </Grid>
+      ))}
+    </Grid>
+  )
+}
+
 const RecipeTemplate = ({ data }) => {
   const {
-    markdownRemark: { htmlAst },
+    markdownRemark: { htmlAst, frontmatter },
   } = data
 
-  return <Layout>{renderAst(htmlAst)}</Layout>
+  const images = (frontmatter && frontmatter.images) || []
+
+  return (
+    <Layout>
+      {renderAst(htmlAst)}
+      <Images images={images} />
+    </Layout>
+  )
 }
 
 export const pageQuery = graphql`
@@ -53,6 +72,22 @@ export const pageQuery = graphql`
       htmlAst
       fields {
         slug
+      }
+      frontmatter {
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        images {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -1,3 +1,9 @@
+---
+featuredImage: IMG_4846.jpeg
+images:
+  - IMG_4846.jpeg
+---
+
 # Cold vinegar lotus roots
 
 ## Ingredients
@@ -22,5 +28,3 @@
 1. Remove the water, mix in the spices, 2 tablespoon of vinegar, a pinch of salt and ½ teaspoon sesame oil
 1. Mix well and let cooled in the fridge
 1. Stir once in a while and ready to serve in 2-3 hours
-
-![](IMG_4846.jpeg)

@@ -1,3 +1,11 @@
+---
+images:
+  - IMG_4842.jpeg
+  - IMG_4843.jpeg
+  - IMG_4844.jpeg
+  - IMG_4847.jpeg
+---
+
 # Spring onion pancakes
 
 ## Ingredients
@@ -15,8 +23,3 @@
 - Split the dough into two balls, cover them with a slighly moist towel and wait for 20 minutes
 - In the meantime cut the bunch of spring onions
 - ...
-
-![](IMG_4842.jpeg)
-![](IMG_4843.jpeg)
-![](IMG_4844.jpeg)
-![](IMG_4847.jpeg)

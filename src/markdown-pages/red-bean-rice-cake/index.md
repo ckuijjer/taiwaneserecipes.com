@@ -1,3 +1,9 @@
+---
+featuredImage: IMG_4812.jpeg
+images:
+  - IMG_4812.jpeg
+---
+
 # Red bean rice cake
 
 ## Ingredients
@@ -15,5 +21,3 @@
 - Cover the inside of a cake shape with parchment paper
 - Pour the contents of the bowl into the cake shape
 - Let it rest in the fridge for a few hours
-
-![](IMG_4812.jpeg)

@@ -25,6 +25,11 @@ const theme = createMuiTheme({
       primary: colors.textColor,
     },
   },
+  props: {
+    MuiButtonBase: {
+      disableRipple: true,
+    },
+  },
   overrides: {
     MuiAppBar: {},
   },

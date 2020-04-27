@@ -1,3 +1,14 @@
+---
+featuredImage: IMG_5096.jpeg
+images:
+  - IMG_9870.JPG
+  - IMG_3128.JPG
+  - IMG_2394.JPG
+  - IMG_6448.JPG
+  - IMG_5096.jpeg
+  - IMG_5097.jpeg
+---
+
 # Spicy cucumber
 
 ## Ingredients
@@ -19,10 +30,3 @@
    _Tip: Use a wide container to make sure all cucumber are soaked in the sauce_
 1. Put the container in the fridge and stir once in a while
 1. After one day, enjoy the tasty spicy cucumber!
-
-![](IMG_9870.JPG)
-![](IMG_3128.JPG)
-![](IMG_2394.JPG)
-![](IMG_6448.JPG)
-![](IMG_5096.jpeg)
-![](IMG_5097.jpeg)
