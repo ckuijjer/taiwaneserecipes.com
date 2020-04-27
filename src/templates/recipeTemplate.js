@@ -24,6 +24,11 @@ const Li = ({ children }) => (
   </li>
 )
 
+const Img = (props) => {
+  console.log('🏙', props)
+  return <img {...props} />
+}
+
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
@@ -34,9 +39,7 @@ const renderAst = new rehypeReact({
   },
 }).Compiler
 
-const RecipeTemplate = ({
-  data, // this prop will be injected by the GraphQL query below.
-}) => {
+const RecipeTemplate = ({ data }) => {
   const {
     markdownRemark: { htmlAst },
   } = data
@@ -48,6 +51,9 @@ export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
       htmlAst
+      fields {
+        slug
+      }
     }
   }
 `
