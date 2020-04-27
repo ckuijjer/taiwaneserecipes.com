@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const recipeTemplate = path.resolve(`src/templates/recipeTemplate.js`)
+  const RecipeTemplate = path.resolve(`src/templates/RecipeTemplate.js`)
 
   const result = await graphql(`
     {
@@ -42,7 +42,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: recipeTemplate,
+      component: RecipeTemplate,
       context: {}, // additional data can be passed via context
     })
   })
