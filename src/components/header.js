@@ -13,12 +13,13 @@ const Header = ({ siteTitle }) => (
     <Toolbar>
       <Container maxWidth="md">
         <Box display="flex" flexDirection="row" alignItems="center">
-          <Box marginRight={2}>
+          {/* <Box marginRight={2}>
             <img src={rijstplannerLogo} />
-          </Box>
+          </Box> */}
           <Link to="/" style={{ textDecoration: 'none', color: 'initial' }}>
             <Typography variant="h6" color="secondary">
-              {siteTitle}
+              {/* {siteTitle} */}
+              Taiwanese Recipes 🇹🇼🤤
             </Typography>
           </Link>
         </Box>
