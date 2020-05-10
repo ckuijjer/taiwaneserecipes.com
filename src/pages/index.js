@@ -63,7 +63,7 @@ const IndexPage = () => {
       <Typography variant="h2" gutterBottom>
         Recipes
       </Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={3}>
         {recipes.map((props) => (
           <Grid item xs={12} md={4} key={props.path}>
             <RecipeCard {...props} />
