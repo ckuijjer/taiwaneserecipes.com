@@ -7,12 +7,15 @@ import CardActionArea from '@material-ui/core/CardActionArea'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   media: {
     height: 180,
     backgroundColor: '#f0f0f0',
   },
-})
+  cardRoot: {
+    padding: `${theme.spacing(2)}px 0`,
+  },
+}))
 
 const RecipeCard = ({ title, path, image }) => {
   const classes = useStyles()
@@ -21,7 +24,7 @@ const RecipeCard = ({ title, path, image }) => {
     <Card className={classes.root} elevation={0} square>
       <CardActionArea onClick={() => navigate(path)}>
         <CardMedia className={classes.media} image={image && image.src} />
-        <CardContent>
+        <CardContent className={classes.cardRoot}>
           <Typography variant="subtitle2" gutterBottom>
             Starter/Side dish
           </Typography>

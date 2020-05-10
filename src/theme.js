@@ -1,4 +1,5 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core'
+import shadows from './shadows'
 
 // export const colors = {
 //   primary: '#ffc917',
@@ -72,6 +73,7 @@ const theme = createMuiTheme({
       disableRipple: true,
     },
   },
+  shadows,
   overrides: {
     MuiAppBar: {},
   },

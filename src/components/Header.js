@@ -7,7 +7,7 @@ import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 
 const Header = ({ siteTitle }) => (
-  <AppBar position="sticky" color="default" elevation={1}>
+  <AppBar position="sticky" color="inherit" elevation={1}>
     <Toolbar>
       <Container maxWidth="md">
         <Box
