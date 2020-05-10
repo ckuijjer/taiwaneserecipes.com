@@ -11,10 +11,9 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 180,
     backgroundColor: '#f0f0f0',
+    margin: theme.spacing(2),
   },
-  cardRoot: {
-    padding: `${theme.spacing(2)}px 0`,
-  },
+  cardRoot: {},
 }))
 
 const RecipeCard = ({ title, path, image }) => {
