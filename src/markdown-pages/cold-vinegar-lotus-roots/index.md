@@ -28,5 +28,3 @@ images:
 1. Remove the water, mix in the spices, vinegar, salt and 1 teaspoon sesame oil
 1. Mix well and let cooled in the fridge and stir once in a while to make sure all slices are soaked
 1. Ready to serve in 2-3 hours
-
-![](IMG_4846.jpeg)
