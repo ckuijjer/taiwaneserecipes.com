@@ -60,10 +60,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Typography variant="h2" gutterBottom>
-        Recipes
-      </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={6}>
         {recipes.map((props) => (
           <Grid item xs={12} md={4} key={props.path}>
             <RecipeCard {...props} />

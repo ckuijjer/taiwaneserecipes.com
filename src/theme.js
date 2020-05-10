@@ -14,27 +14,27 @@ const theme = createMuiTheme({
   typography: {
     h1: {
       fontFamily: 'Playfair Display',
-      fontWeight: 700,
+      fontWeight: 400,
     },
     h2: {
       fontFamily: 'Playfair Display',
-      fontWeight: 700,
+      fontWeight: 400,
     },
     h3: {
       fontFamily: 'Playfair Display',
-      fontWeight: 700,
+      fontWeight: 400,
     },
     h4: {
       fontFamily: 'Playfair Display',
-      fontWeight: 700,
+      fontWeight: 400,
     },
     h5: {
       fontFamily: 'Playfair Display',
-      fontWeight: 700,
+      fontWeight: 400,
     },
     h6: {
       fontFamily: 'Playfair Display',
-      fontWeight: 700,
+      fontWeight: 400,
     },
     fontFamily: [
       'Open Sans',
@@ -63,6 +63,9 @@ const theme = createMuiTheme({
     // text: {
     //   primary: colors.textColor,
     // },
+    background: {
+      default: '#fff',
+    },
   },
   props: {
     MuiButtonBase: {

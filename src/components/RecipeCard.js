@@ -10,7 +10,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 const useStyles = makeStyles({
   media: {
     height: 180,
-    backgroundColor: '#f6f6f6',
+    backgroundColor: '#f0f0f0',
   },
 })
 
@@ -22,8 +22,14 @@ const RecipeCard = ({ title, path, image }) => {
       <CardActionArea onClick={() => navigate(path)}>
         <CardMedia className={classes.media} image={image && image.src} />
         <CardContent>
+          <Typography variant="subtitle2" gutterBottom>
+            Starter/Side dish
+          </Typography>
           <Typography gutterBottom variant="h5" component="h2">
             {title}
+          </Typography>
+          <Typography variant="subtitle2" gutterBottom>
+            Prepare time: 20 mins
           </Typography>
         </CardContent>
       </CardActionArea>
