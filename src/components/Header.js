@@ -6,21 +6,18 @@ import Typography from '@material-ui/core/Typography'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 
-import rijstplannerLogo from '../images/rijstplanner-logo.svg'
-
 const Header = ({ siteTitle }) => (
-  <AppBar position="sticky" color="default">
+  <AppBar position="sticky" color="default" elevation={1}>
     <Toolbar>
       <Container maxWidth="md">
-        <Box display="flex" flexDirection="row" alignItems="center">
-          {/* <Box marginRight={2}>
-            <img src={rijstplannerLogo} />
-          </Box> */}
+        <Box
+          display="flex"
+          flexDirection="row"
+          alignItems="center"
+          justifyContent="center"
+        >
           <Link to="/" style={{ textDecoration: 'none', color: 'initial' }}>
-            <Typography variant="h6" color="secondary">
-              {/* {siteTitle} */}
-              Taiwanese Recipes 🇹🇼🤤
-            </Typography>
+            <Typography variant="h6">{siteTitle}</Typography>
           </Link>
         </Box>
       </Container>

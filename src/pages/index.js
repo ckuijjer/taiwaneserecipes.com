@@ -60,7 +60,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Typography variant="h2" component="h1" color="secondary" gutterBottom>
+      <Typography variant="h2" gutterBottom>
         Recipes
       </Typography>
       <Grid container spacing={2}>

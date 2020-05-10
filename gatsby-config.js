@@ -56,10 +56,11 @@ module.exports = {
     },
     `gatsby-plugin-material-ui`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [`roboto`],
-        display: 'swap',
+        google: {
+          families: ['Playfair Display', 'Open Sans'],
+        },
       },
     },
   ],

@@ -9,12 +9,12 @@ import Paper from '@material-ui/core/Paper'
 import Layout from '../components/Layout'
 
 const H1 = ({ children }) => (
-  <Typography variant="h2" component="h1" color="secondary" gutterBottom>
+  <Typography variant="h2" component="h1" gutterBottom>
     {children}
   </Typography>
 )
 const H2 = ({ children }) => (
-  <Typography variant="h4" component="h2" color="secondary" gutterBottom>
+  <Typography variant="h4" component="h2" gutterBottom>
     {children}
   </Typography>
 )
