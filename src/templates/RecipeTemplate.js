@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 
 import Layout from '../components/Layout'
+import SEO from '../components/Seo'
 
 const H1 = ({ children }) => (
   <Typography variant="h2" component="h1" gutterBottom>
@@ -53,13 +54,15 @@ const Images = ({ images = [] }) => {
 
 const RecipeTemplate = ({ data }) => {
   const {
-    markdownRemark: { htmlAst, frontmatter },
+    markdownRemark: { htmlAst, frontmatter, headings },
   } = data
 
+  const title = headings && headings[0] && headings[0].value
   const images = (frontmatter && frontmatter.images) || []
 
   return (
     <Layout>
+      <SEO title={title} />
       {renderAst(htmlAst)}
       <Images images={images} />
     </Layout>
@@ -88,6 +91,9 @@ export const pageQuery = graphql`
             }
           }
         }
+      }
+      headings(depth: h1) {
+        value
       }
     }
   }
