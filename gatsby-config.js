@@ -3,7 +3,8 @@ module.exports = {
   siteMetadata: {
     title: `Taiwanese Recipes`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `Yi-An Lai & Casper Kuijjer`,
+    siteUrl: 'https://ckuijjer.github.io/recipes/',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -19,11 +20,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Taiwanese Recipes`,
+        short_name: `Taiwanese Recipes`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#333`,
+        theme_color: `#333`,
         display: `minimal-ui`,
         // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
@@ -61,6 +62,29 @@ module.exports = {
         google: {
           families: ['Playfair Display:400,600', 'Open Sans'],
         },
+      },
+    },
+    'gatsby-plugin-robots-txt',
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+        }`,
       },
     },
   ],
