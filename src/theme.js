@@ -1,4 +1,6 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core'
+import grey from '@material-ui/core/colors/grey'
+
 import shadows from './shadows'
 
 // export const colors = {
@@ -12,45 +14,6 @@ import shadows from './shadows'
 
 // A custom theme for this app
 const theme = createMuiTheme({
-  typography: {
-    h1: {
-      fontFamily: 'Playfair Display',
-      fontWeight: 400,
-    },
-    h2: {
-      fontFamily: 'Playfair Display',
-      fontWeight: 400,
-    },
-    h3: {
-      fontFamily: 'Playfair Display',
-      fontWeight: 400,
-    },
-    h4: {
-      fontFamily: 'Playfair Display',
-      fontWeight: 400,
-    },
-    h5: {
-      fontFamily: 'Playfair Display',
-      fontWeight: 400,
-    },
-    h6: {
-      fontFamily: 'Playfair Display',
-      fontWeight: 400,
-    },
-    fontFamily: [
-      'Open Sans',
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
-  },
   palette: {
     // primary: {
     //   main: colors.primary,
@@ -68,6 +31,49 @@ const theme = createMuiTheme({
       default: '#fff',
     },
   },
+  typography: {
+    fontFamily: [
+      'Open Sans',
+      '-apple-system',
+      'BlinkMacSystemFont',
+      '"Segoe UI"',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(','),
+    h1: {
+      fontFamily: 'Playfair Display',
+      fontWeight: 600,
+    },
+    h2: {
+      fontFamily: 'Playfair Display',
+      fontWeight: 600,
+    },
+    h3: {
+      fontFamily: 'Playfair Display',
+      fontWeight: 600,
+    },
+    h4: {
+      fontFamily: 'Playfair Display',
+      fontWeight: 600,
+    },
+    h5: {
+      fontFamily: 'Playfair Display',
+      fontWeight: 600,
+    },
+    h6: {
+      fontFamily: 'Playfair Display',
+      fontWeight: 600,
+    },
+    subtitle2: {
+      color: grey[500],
+    },
+  },
+
   props: {
     MuiButtonBase: {
       disableRipple: true,

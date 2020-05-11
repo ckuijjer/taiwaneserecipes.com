@@ -1,5 +1,6 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
+import Divider from '@material-ui/core/Divider'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
@@ -61,6 +62,106 @@ export default function Types() {
       </Typography>
       <Typography variant="overline" display="block" gutterBottom>
         overline text
+      </Typography>
+
+      <Divider />
+      <Typography variant="h2" gutterBottom>
+        Playfair Display
+      </Typography>
+      <Typography
+        variant="body1"
+        gutterBottom
+        style={{ fontFamily: 'Playfair Display', fontWeight: 100 }}
+      >
+        100. Font Weight
+      </Typography>
+      <Typography
+        variant="body1"
+        gutterBottom
+        style={{ fontFamily: 'Playfair Display', fontWeight: 200 }}
+      >
+        200. Font Weight
+      </Typography>
+      <Typography
+        variant="body1"
+        gutterBottom
+        style={{ fontFamily: 'Playfair Display', fontWeight: 300 }}
+      >
+        300. Font Weight
+      </Typography>
+      <Typography
+        variant="body1"
+        gutterBottom
+        style={{ fontFamily: 'Playfair Display', fontWeight: 400 }}
+      >
+        400. Font Weight
+      </Typography>
+      <Typography
+        variant="body1"
+        gutterBottom
+        style={{ fontFamily: 'Playfair Display', fontWeight: 500 }}
+      >
+        500. Font Weight
+      </Typography>
+      <Typography
+        variant="body1"
+        gutterBottom
+        style={{ fontFamily: 'Playfair Display', fontWeight: 600 }}
+      >
+        600. Font Weight
+      </Typography>
+      <Typography
+        variant="body1"
+        gutterBottom
+        style={{ fontFamily: 'Playfair Display', fontWeight: 700 }}
+      >
+        700. Font Weight
+      </Typography>
+      <Typography
+        variant="body1"
+        gutterBottom
+        style={{ fontFamily: 'Playfair Display', fontWeight: 800 }}
+      >
+        800. Font Weight
+      </Typography>
+      <Typography
+        variant="body1"
+        gutterBottom
+        style={{ fontFamily: 'Playfair Display', fontWeight: 900 }}
+      >
+        900. Font Weight
+      </Typography>
+
+      <Divider />
+      <Typography variant="h2" gutterBottom style={{ fontFamily: 'Open Sans' }}>
+        Open Sans
+      </Typography>
+      <Typography variant="body1" gutterBottom style={{ fontWeight: 100 }}>
+        100. Font Weight
+      </Typography>
+      <Typography variant="body1" gutterBottom style={{ fontWeight: 200 }}>
+        200. Font Weight
+      </Typography>
+      <Typography variant="body1" gutterBottom style={{ fontWeight: 300 }}>
+        300. Font Weight
+      </Typography>
+      <Typography variant="body1" gutterBottom style={{ fontWeight: 400 }}>
+        400. Font Weight
+      </Typography>
+      <Typography variant="body1" gutterBottom style={{ fontWeight: 500 }}>
+        500. Font Weight
+      </Typography>
+      <Typography variant="body1" gutterBottom style={{ fontWeight: 600 }}>
+        600. Font Weight
+      </Typography>
+      <Typography variant="body1" gutterBottom style={{ fontWeight: 700 }}>
+        700. Font Weight
+      </Typography>
+      <Typography variant="body1" gutterBottom style={{ fontWeight: 800 }}>
+        800. Font Weight
+      </Typography>
+      <Typography variant="body1" gutterBottom style={{ fontWeight: 900 }}>
+        900. Font Weight
       </Typography>
     </div>
   )

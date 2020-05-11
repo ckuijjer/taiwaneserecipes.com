@@ -31,7 +31,7 @@ const RecipeCard = ({ title, path, image }) => {
             {title}
           </Typography>
           <Typography variant="subtitle2" gutterBottom>
-            Prepare time: 20 mins
+            Preparation time: 20 mins
           </Typography>
         </CardContent>
       </CardActionArea>
