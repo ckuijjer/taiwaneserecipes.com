@@ -23,8 +23,8 @@ module.exports = {
         name: `Taiwanese Recipes`,
         short_name: `Taiwanese Recipes`,
         start_url: `/`,
-        background_color: `#333`,
-        theme_color: `#333`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
         icon: `src/images/taiwan-flag.png`, // This path is relative to the root of the site.
       },
