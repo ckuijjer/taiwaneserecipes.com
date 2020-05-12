@@ -47,27 +47,27 @@ const theme = createMuiTheme({
     ].join(','),
     h1: {
       fontFamily: 'Playfair Display',
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h2: {
       fontFamily: 'Playfair Display',
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h3: {
       fontFamily: 'Playfair Display',
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h4: {
       fontFamily: 'Playfair Display',
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h5: {
       fontFamily: 'Playfair Display',
-      fontWeight: 600,
+      fontWeight: 700,
     },
     h6: {
       fontFamily: 'Playfair Display',
-      fontWeight: 600,
+      fontWeight: 700,
     },
     subtitle2: {
       color: grey[500],
