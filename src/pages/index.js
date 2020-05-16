@@ -41,21 +41,32 @@ const IndexPage = () => {
     }
   `)
 
-  const recipes = data.allMarkdownRemark.edges.map(({ node }) => ({
-    title: node.headings[0].value,
-    path: node.fields.slug,
-    image:
-      (node &&
-        node.frontmatter &&
-        node.frontmatter.featuredImage &&
-        node.frontmatter.featuredImage.childImageSharp &&
-        node.frontmatter.featuredImage.childImageSharp.fluid) ||
-      (node &&
-        node.frontmatter &&
-        node.frontmatter.images &&
-        node.frontmatter.images[0].childImageSharp &&
-        node.frontmatter.images[0].childImageSharp.fluid),
-  }))
+  const recipes = data.allMarkdownRemark.edges
+    .map(({ node }) => ({
+      title: node.headings[0].value,
+      path: node.fields.slug,
+      image:
+        (node &&
+          node.frontmatter &&
+          node.frontmatter.featuredImage &&
+          node.frontmatter.featuredImage.childImageSharp &&
+          node.frontmatter.featuredImage.childImageSharp.fluid) ||
+        (node &&
+          node.frontmatter &&
+          node.frontmatter.images &&
+          node.frontmatter.images[0].childImageSharp &&
+          node.frontmatter.images[0].childImageSharp.fluid),
+    }))
+    .sort((
+      a,
+      b, // recipes with images on top, and both groups alphabetically
+    ) =>
+      !!a.image === !!b.image
+        ? a.title.localeCompare(b.title)
+        : !!a.image
+        ? -1
+        : 1,
+    )
 
   return (
     <Layout>
