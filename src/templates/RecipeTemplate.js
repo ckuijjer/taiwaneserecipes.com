@@ -43,7 +43,7 @@ const Images = ({ images = [] }) => {
     <Grid container spacing={2}>
       {images.map((image) => (
         <Grid item xs={12} md={4} key={image.childImageSharp.fluid.src}>
-          <Paper style={{ overflow: 'hidden' }}>
+          <Paper style={{ overflow: 'hidden' }} square>
             <Img fluid={image.childImageSharp.fluid} durationFadeIn={100} />
           </Paper>
         </Grid>

@@ -1,4 +1,5 @@
 ---
+featuredImage: IMG_5506.jpeg
 images:
   - IMG_5365.jpeg
   - IMG_5366.jpeg
