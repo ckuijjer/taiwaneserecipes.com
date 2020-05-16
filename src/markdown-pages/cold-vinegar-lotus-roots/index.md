@@ -1,7 +1,18 @@
 ---
-featuredImage: IMG_4846.jpeg
+featuredImage: IMG_0165.jpeg
 images:
   - IMG_4846.jpeg
+  - IMG_0155.jpeg
+  - IMG_0156.jpeg
+  - IMG_0157.jpeg
+  - IMG_0158.jpeg
+  - IMG_0159.jpeg
+  - IMG_0160.jpeg
+  - IMG_0161.jpeg
+  - IMG_0162.jpeg
+  - IMG_0163.jpeg
+  - IMG_0164.jpeg
+  - IMG_0165.jpeg
 ---
 
 # Cold vinegar lotus roots

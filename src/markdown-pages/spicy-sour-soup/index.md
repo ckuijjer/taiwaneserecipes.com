@@ -1,4 +1,5 @@
 ---
+featuredImage: IMG_5273.jpeg
 images:
   - IMG_5229.jpeg
   - IMG_5230.jpeg
