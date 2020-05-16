@@ -17,7 +17,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const RecipeTemplate = path.resolve(`src/templates/RecipeTemplate.js`)
+  const RecipeTemplate = path.resolve(`src/templates/RecipeTemplate.tsx`)
 
   const result = await graphql(`
     {

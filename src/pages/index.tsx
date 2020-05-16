@@ -1,7 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
+import { ItemList, ItemListLeaf } from 'schema-dts'
+import { JsonLd } from 'react-schemaorg'
 
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
@@ -46,16 +47,8 @@ const IndexPage = () => {
       title: node.headings[0].value,
       path: node.fields.slug,
       image:
-        (node &&
-          node.frontmatter &&
-          node.frontmatter.featuredImage &&
-          node.frontmatter.featuredImage.childImageSharp &&
-          node.frontmatter.featuredImage.childImageSharp.fluid) ||
-        (node &&
-          node.frontmatter &&
-          node.frontmatter.images &&
-          node.frontmatter.images[0].childImageSharp &&
-          node.frontmatter.images[0].childImageSharp.fluid),
+        node?.frontmatter?.featuredImage?.childImageSharp?.fluid ||
+        node?.frontmatter?.images?.[0].childImageSharp?.fluid,
     }))
     .sort((
       a,
@@ -71,6 +64,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
+      <RecipeItemList recipes={recipes} />
       <Grid container spacing={2}>
         {recipes.map((props) => (
           <Grid item xs={12} md={4} key={props.path}>
@@ -81,5 +75,17 @@ const IndexPage = () => {
     </Layout>
   )
 }
+
+const RecipeItemList = ({ recipes }) => (
+  <JsonLd<ItemListLeaf>
+    item={{
+      itemListElement: recipes.map((recipe, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: recipe.path,
+      })),
+    }}
+  />
+)
 
 export default IndexPage

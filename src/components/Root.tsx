@@ -2,7 +2,7 @@ import React from 'react'
 import { ThemeProvider } from '@material-ui/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 
-import theme from '../theme.js'
+import theme from '../theme.ts'
 
 const Root = ({ element }) => (
   <ThemeProvider theme={theme}>
