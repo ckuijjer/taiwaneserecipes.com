@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Grid from '@material-ui/core/Grid'
-import { ItemList, ItemListLeaf } from 'schema-dts'
+import { ItemList, ListItem } from 'schema-dts'
 import { JsonLd } from 'react-schemaorg'
 
 import Layout from '../components/Layout'
@@ -11,6 +11,11 @@ import RecipeCard from '../components/RecipeCard'
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
+      site {
+        siteMetadata {
+          siteUrl
+        }
+      }
       allMarkdownRemark(limit: 1000, sort: { fields: fields___slug }) {
         edges {
           node {
@@ -64,7 +69,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <RecipeItemList recipes={recipes} />
+      <RecipeItemList
+        recipes={recipes}
+        siteUrl={data?.site?.siteMetadata?.siteUrl}
+      />
       <Grid container spacing={2}>
         {recipes.map((props) => (
           <Grid item xs={12} md={4} key={props.path}>
@@ -76,14 +84,18 @@ const IndexPage = () => {
   )
 }
 
-const RecipeItemList = ({ recipes }) => (
-  <JsonLd<ItemListLeaf>
+const RecipeItemList = ({ recipes, siteUrl }) => (
+  <JsonLd<ItemList>
     item={{
-      itemListElement: recipes.map((recipe, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        url: recipe.path,
-      })),
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListElement: recipes.map(
+        (recipe, i): ListItem => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          url: `${siteUrl}${recipe.path}`,
+        }),
+      ),
     }}
   />
 )
