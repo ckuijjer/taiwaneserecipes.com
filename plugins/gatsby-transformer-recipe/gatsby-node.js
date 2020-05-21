@@ -16,7 +16,8 @@ exports.onCreateNode = async ({
   const ast = remark().parse(content)
 
   const title =
-    node.frontmatter?.title || toString(select.select('heading[depth=1]', ast))
+    (node.frontmatter && node.frontmatter.title) ||
+    toString(select.select('heading[depth=1]', ast))
 
   const steps = select
     .selectAll('heading:has(text[value=Steps]) + list > listItem ', ast)
