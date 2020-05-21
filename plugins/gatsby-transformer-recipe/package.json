@@ -1,0 +1,6 @@
+{
+  "name": "gatsby-transformer-recipe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}

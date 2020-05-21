@@ -69,7 +69,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <RecipeItemList
+      <RecipeItemListLinkedData
         recipes={recipes}
         siteUrl={data?.site?.siteMetadata?.siteUrl}
       />
@@ -84,7 +84,7 @@ const IndexPage = () => {
   )
 }
 
-const RecipeItemList = ({ recipes, siteUrl }) => (
+const RecipeItemListLinkedData = ({ recipes, siteUrl }) => (
   <JsonLd<ItemList>
     item={{
       '@context': 'https://schema.org',

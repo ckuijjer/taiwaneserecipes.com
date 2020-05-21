@@ -55,6 +55,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-transformer-recipe`,
     `gatsby-plugin-material-ui`,
     {
       resolve: 'gatsby-plugin-web-font-loader',

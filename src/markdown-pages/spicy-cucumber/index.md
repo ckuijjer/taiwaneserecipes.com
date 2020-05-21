@@ -19,7 +19,7 @@ images:
 - 30ml Apple Vinegar (or regular vinegar with some sugar)
 - ½ teaspoon Salt
 
-## Step
+## Steps
 
 1. Cut the cucumber, remove the middle parts with a small spoon
 1. Mix salt and cucumbers and wait for 20 mins to dehydrate the cucumber
