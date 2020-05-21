@@ -57,39 +57,68 @@ const Images = ({ images = [] }) => {
 const RecipeTemplate = ({ data }) => {
   const {
     markdownRemark: { htmlAst, frontmatter, children },
+    site: {
+      siteMetadata: { author, siteUrl },
+    },
   } = data
 
   const images = frontmatter?.images ?? []
+  const featuredImage = frontmatter?.featuredImage
   const recipeMetadata = children[0]
   const { title } = recipeMetadata
 
   return (
     <Layout>
       <SEO title={title} />
-      <RecipeLinkedData {...recipeMetadata} images={images} />
+      <RecipeLinkedData
+        {...recipeMetadata}
+        featuredImage={featuredImage}
+        images={images}
+        siteUrl={siteUrl}
+        author={author}
+      />
       {renderAst(htmlAst)}
       <Images images={images} />
     </Layout>
   )
 }
 
-const RecipeLinkedData = ({ title, ingredients = [], steps = [], images }) => (
+const RecipeLinkedData = ({
+  title,
+  ingredients = [],
+  steps = [],
+  images,
+  featuredImage,
+  siteUrl,
+  author,
+}) => (
   <JsonLd<Recipe>
     item={{
       '@context': 'https://schema.org',
       '@type': 'Recipe',
+      author: {
+        '@type': 'Person',
+        name: author,
+      },
       name: title,
       recipeIngredient: ingredients,
       recipeInstructions: steps.map((step) => ({
         '@type': 'HowToStep',
         text: step,
       })),
+      image: [`${siteUrl}${featuredImage.childImageSharp.fluid.src}`],
     }}
   />
 )
 
 export const pageQuery = graphql`
   query($path: String!) {
+    site {
+      siteMetadata {
+        author
+        siteUrl
+      }
+    }
     markdownRemark(fields: { slug: { eq: $path } }) {
       htmlAst
       fields {

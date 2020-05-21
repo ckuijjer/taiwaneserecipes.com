@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/recipes',
   siteMetadata: {
     title: `Taiwanese Recipes`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Taiwanese Recipes`,
     author: `Yi-An Lai & Casper Kuijjer`,
     siteUrl: 'https://ckuijjer.github.io/recipes/',
   },
