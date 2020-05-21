@@ -106,7 +106,9 @@ const RecipeLinkedData = ({
         '@type': 'HowToStep',
         text: step,
       })),
-      image: [`${siteUrl}${featuredImage.childImageSharp.fluid.src}`],
+      image: featuredImage?.childImageSharp && [
+        `${siteUrl}${featuredImage.childImageSharp.fluid.src}`,
+      ],
     }}
   />
 )
