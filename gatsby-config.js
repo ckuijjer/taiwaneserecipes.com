@@ -69,7 +69,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        exclude: [],
+        exclude: ['/typography'],
         query: `
           {
             site {
