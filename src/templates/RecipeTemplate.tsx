@@ -5,11 +5,10 @@ import rehypeReact from 'rehype-react'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
-import { Recipe } from 'schema-dts'
-import { JsonLd } from 'react-schemaorg'
 
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
+import RecipeLinkedData from '../components/RecipeLinkedData'
 
 const H1 = ({ children }) => (
   <Typography variant="h2" component="h1" gutterBottom>
@@ -66,6 +65,8 @@ const RecipeTemplate = ({ data }) => {
   const featuredImage = frontmatter?.featuredImage
   const recipeMetadata = children[0]
   const { title } = recipeMetadata
+  const totalTime = frontmatter?.totalTime
+  const category = frontmatter?.category
 
   return (
     <Layout>
@@ -76,44 +77,14 @@ const RecipeTemplate = ({ data }) => {
         images={images}
         siteUrl={siteUrl}
         author={author}
+        category={category}
+        totalTime={totalTime}
       />
       {renderAst(htmlAst)}
       <Images images={images} />
     </Layout>
   )
 }
-
-const RecipeLinkedData = ({
-  title,
-  ingredients = [],
-  steps = [],
-  images,
-  featuredImage,
-  siteUrl,
-  author,
-}) => (
-  <JsonLd<Recipe>
-    item={{
-      '@context': 'https://schema.org',
-      '@type': 'Recipe',
-      author: {
-        '@type': 'Person',
-        name: author,
-      },
-      name: title,
-      recipeIngredient: ingredients,
-      recipeInstructions: steps.map((step) => ({
-        '@type': 'HowToStep',
-        text: step,
-      })),
-      image: featuredImage?.childImageSharp && [
-        `${siteUrl}${featuredImage.childImageSharp.fluid.src}`,
-      ],
-      recipeCuisine: 'Taiwanese',
-      suitableForDiet: 'http://schema.org/VegetarianDiet',
-    }}
-  />
-)
 
 export const pageQuery = graphql`
   query($path: String!) {
@@ -143,6 +114,10 @@ export const pageQuery = graphql`
             }
           }
         }
+        totalTime
+        prepTime
+        cookTime
+        category
       }
       children {
         ... on Recipe {
