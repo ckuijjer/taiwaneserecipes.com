@@ -6,6 +6,7 @@ import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
+import humanizeISO8601Duration from '../humanizeISO8601Duration'
 
 const useStyles = makeStyles((theme) => ({
   media: {
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   cardRoot: {},
 }))
 
-const RecipeCard = ({ title, path, image }) => {
+const RecipeCard = ({ title, path, image, totalTime, category }) => {
   const classes = useStyles()
 
   return (
@@ -25,13 +26,17 @@ const RecipeCard = ({ title, path, image }) => {
         <CardMedia className={classes.media} image={image && image.src} />
         <CardContent className={classes.cardRoot}>
           <Typography variant="subtitle2" gutterBottom>
-            Starter/Side dish
+            {category ? category : <>&nbsp;</>}
           </Typography>
           <Typography gutterBottom variant="h5" component="h2">
             {title}
           </Typography>
           <Typography variant="subtitle2" gutterBottom>
-            Preparation time: 20 mins
+            {totalTime ? (
+              `Total time: ${humanizeISO8601Duration(totalTime)}`
+            ) : (
+              <>&nbsp;</>
+            )}
           </Typography>
         </CardContent>
       </CardActionArea>

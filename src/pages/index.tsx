@@ -27,6 +27,10 @@ const IndexPage = () => {
               slug
             }
             frontmatter {
+              prepTime
+              cookTime
+              totalTime
+              category
               featuredImage {
                 childImageSharp {
                   fluid(maxWidth: 800) {
@@ -53,8 +57,10 @@ const IndexPage = () => {
       title: node.headings[0].value,
       path: node.fields.slug,
       image:
-        node?.frontmatter?.featuredImage?.childImageSharp?.fluid ||
-        node?.frontmatter?.images?.[0].childImageSharp?.fluid,
+        node.frontmatter?.featuredImage?.childImageSharp?.fluid ||
+        node.frontmatter?.images?.[0].childImageSharp?.fluid,
+      category: node.frontmatter?.category,
+      totalTime: node.frontmatter?.totalTime,
     }))
     .sort((
       a,

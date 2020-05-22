@@ -34,6 +34,7 @@ images:
   - IMG_4844.jpeg
   - IMG_4843.jpeg
   - IMG_4842.jpeg
+category: Main Dish
 ---
 
 # Spring onion pancakes

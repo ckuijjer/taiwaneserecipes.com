@@ -2,6 +2,7 @@
 featuredImage: IMG_4812.jpeg
 images:
   - IMG_4812.jpeg
+category: Dessert
 ---
 
 # Red bean rice cake

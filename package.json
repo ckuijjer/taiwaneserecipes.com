@@ -22,6 +22,8 @@
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-transformer-remark": "^2.7.5",
     "gatsby-transformer-sharp": "^2.4.6",
+    "humanize-duration": "^3.23.0",
+    "iso8601-duration": "^1.2.0",
     "mdast-util-to-string": "^1.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

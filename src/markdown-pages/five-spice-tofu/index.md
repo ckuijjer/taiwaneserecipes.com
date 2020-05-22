@@ -3,6 +3,7 @@ featuredImage: IMG_4889.jpeg
 images:
   - IMG_4889.jpeg
   - IMG_4890.jpeg
+category: Starter/Side dish
 ---
 
 # Five spices tofu
