@@ -109,6 +109,8 @@ const RecipeLinkedData = ({
       image: featuredImage?.childImageSharp && [
         `${siteUrl}${featuredImage.childImageSharp.fluid.src}`,
       ],
+      recipeCuisine: 'Taiwanese',
+      suitableForDiet: 'http://schema.org/VegetarianDiet',
     }}
   />
 )
