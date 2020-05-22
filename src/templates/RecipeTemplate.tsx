@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, withPrefix } from 'gatsby'
 import Img from 'gatsby-image'
 import rehypeReact from 'rehype-react'
 import Typography from '@material-ui/core/Typography'
@@ -107,7 +107,7 @@ const RecipeLinkedData = ({
         text: step,
       })),
       image: featuredImage?.childImageSharp && [
-        `${siteUrl}${featuredImage.childImageSharp.fluid.src}`,
+        `${siteUrl}${withPrefix(featuredImage.childImageSharp.fluid.src)}`,
       ],
     }}
   />

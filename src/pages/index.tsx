@@ -7,6 +7,7 @@ import { JsonLd } from 'react-schemaorg'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import RecipeCard from '../components/RecipeCard'
+import { withPrefix } from 'gatsby'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -93,7 +94,7 @@ const RecipeItemListLinkedData = ({ recipes, siteUrl }) => (
         (recipe, i): ListItem => ({
           '@type': 'ListItem',
           position: i + 1,
-          url: `${siteUrl}${recipe.path}`,
+          url: `${siteUrl}${withPrefix(recipe.path)}`,
         }),
       ),
     }}

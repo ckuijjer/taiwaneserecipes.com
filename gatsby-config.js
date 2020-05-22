@@ -4,7 +4,7 @@ module.exports = {
     title: `Taiwanese Recipes`,
     description: `Taiwanese Recipes`,
     author: `Yi-An Lai & Casper Kuijjer`,
-    siteUrl: 'https://ckuijjer.github.io/recipes/',
+    siteUrl: 'https://ckuijjer.github.io',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -77,7 +77,6 @@ module.exports = {
                 siteUrl
               }
             }
-  
             allSitePage {
               edges {
                 node {
