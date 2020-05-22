@@ -107,7 +107,7 @@ const RecipeLinkedData = ({
         text: step,
       })),
       image: featuredImage?.childImageSharp && [
-        `${siteUrl}${withPrefix(featuredImage.childImageSharp.fluid.src)}`,
+        `${siteUrl}${featuredImage.childImageSharp.fluid.src}`,
       ],
     }}
   />
