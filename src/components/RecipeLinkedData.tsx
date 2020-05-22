@@ -1,5 +1,4 @@
 import React from 'react'
-import { Duration } from 'iso8601-duration'
 import { Recipe as RecipeSchema } from 'schema-dts'
 import { JsonLd } from 'react-schemaorg'
 
@@ -12,9 +11,9 @@ type Recipe = {
   siteUrl: string // query this one?
   author: string // query this one?
   category: string
-  totalTime: Duration
-  prepTime: Duration
-  cookTime: Duration
+  totalTime: string
+  prepTime: string
+  cookTime: string
 }
 
 const RecipeLinkedData = ({
@@ -47,7 +46,7 @@ const RecipeLinkedData = ({
       recipeCuisine: 'Taiwanese',
       suitableForDiet: 'http://schema.org/VegetarianDiet',
       recipeCategory: category,
-      //   totalTime,
+      totalTime,
     }}
   />
 )
