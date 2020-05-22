@@ -21,6 +21,10 @@ images:
   - IMG_5178.jpeg
   - IMG_5179.jpeg
   - IMG_5180.jpeg
+totalTime: PT30M
+prepTime: PT15M
+cookTime: PT15M
+category: Main Dish
 ---
 
 # Chinese cabbage stew
