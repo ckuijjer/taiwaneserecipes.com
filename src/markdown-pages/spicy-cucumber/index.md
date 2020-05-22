@@ -7,6 +7,7 @@ images:
   - IMG_6448.JPG
   - IMG_5096.jpeg
   - IMG_5097.jpeg
+category: Starter/Side dish
 ---
 
 # Spicy cucumber

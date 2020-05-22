@@ -13,6 +13,7 @@ images:
   - IMG_0163.jpeg
   - IMG_0164.jpeg
   - IMG_0165.jpeg
+category: Starter/Side dish
 ---
 
 # Cold vinegar lotus roots

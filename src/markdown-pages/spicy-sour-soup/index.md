@@ -13,6 +13,7 @@ images:
   - IMG_5262.jpeg
   - IMG_5271.jpeg
   - IMG_5273.jpeg
+category: Main Dish
 ---
 
 # Spicy sour soup
