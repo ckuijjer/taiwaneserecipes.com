@@ -48,6 +48,7 @@ const theme = createMuiTheme({
     h1: {
       fontFamily: 'Playfair Display',
       fontWeight: 700,
+      // fontSize: '4.5rem',
     },
     h2: {
       fontFamily: 'Playfair Display',

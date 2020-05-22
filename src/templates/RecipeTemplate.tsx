@@ -9,12 +9,14 @@ import Paper from '@material-ui/core/Paper'
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import RecipeLinkedData from '../components/RecipeLinkedData'
+import Hero from '../components/Hero'
 
-const H1 = ({ children }) => (
-  <Typography variant="h2" component="h1" gutterBottom>
-    {children}
-  </Typography>
-)
+const H1 = () => null
+// const H1 = ({ children }) => (
+//   <Typography variant="h2" component="h1" gutterBottom>
+//     {children}
+//   </Typography>
+// )
 const H2 = ({ children }) => (
   <Typography variant="h4" component="h2" gutterBottom>
     {children}
@@ -80,6 +82,10 @@ const RecipeTemplate = ({ data }) => {
         category={category}
         totalTime={totalTime}
       />
+      <Typography variant="h2" style={{ marginBottom: 32 }}>
+        {title}
+      </Typography>
+      <Hero title={title} image={featuredImage} style={{ marginBottom: 32 }} />
       {renderAst(htmlAst)}
       <Images images={images} />
     </Layout>
