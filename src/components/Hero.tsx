@@ -10,7 +10,7 @@ import Img from 'gatsby-image'
 const Hero = ({ title, image, style = {} }) => (
   <div style={{ ...style, padding: 0, height: 400, position: 'relative' }}>
     <Img
-      fluid={image.childImageSharp.fluid}
+      fluid={image?.childImageSharp?.fluid}
       style={{ width: '100%', height: '100%' }}
       objectFit="cover"
       objectPosition="bottom left"
