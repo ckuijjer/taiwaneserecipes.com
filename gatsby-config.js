@@ -1,10 +1,9 @@
 module.exports = {
-  pathPrefix: '/recipes',
   siteMetadata: {
     title: `Taiwanese Recipes`,
     description: `Taiwanese Recipes`,
     author: `Yi-An Lai & Casper Kuijjer`,
-    siteUrl: 'https://ckuijjer.github.io',
+    siteUrl: 'https://www.taiwaneserecipes.com',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
