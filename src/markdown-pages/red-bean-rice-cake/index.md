@@ -5,7 +5,7 @@ images:
 category: Dessert
 ---
 
-# Red bean rice cake
+# Red Bean Rice Cake
 
 ## Ingredients
 

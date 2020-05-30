@@ -37,7 +37,7 @@ images:
 category: Main Dish
 ---
 
-# Spring onion pancakes
+# Spring Onion Pancakes
 
 ## Ingredients
 

@@ -27,7 +27,7 @@ cookTime: PT15M
 category: Main Dish
 ---
 
-# Chinese cabbage stew
+# Chinese Cabbage Stew
 
 ## Ingredients
 

@@ -16,7 +16,7 @@ images:
 category: Starter/Side dish
 ---
 
-# Cold vinegar lotus roots
+# Cold Vinegar Lotus Roots
 
 ## Ingredients
 

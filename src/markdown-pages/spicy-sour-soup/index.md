@@ -16,7 +16,7 @@ images:
 category: Main Dish
 ---
 
-# Spicy sour soup
+# Spicy Sour Soup
 
 ## Ingredients
 

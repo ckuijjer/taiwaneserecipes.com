@@ -10,7 +10,7 @@ images:
 category: Starter/Side dish
 ---
 
-# Spicy cucumber
+# Spicy Cucumber
 
 ## Ingredients
 

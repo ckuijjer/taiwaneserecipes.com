@@ -1,4 +1,4 @@
-# Salted eggs with bitter melon
+# Salted Eggs with Bitter Melon
 
 ## Ingredients
 

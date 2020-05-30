@@ -6,7 +6,7 @@ images:
 category: Main Dish
 ---
 
-# Five spices tofu
+# Five Spices Tofu
 
 ## Ingredients
 
