@@ -31,16 +31,23 @@ const Ingredient = ({ children }) => {
   const [checked, setChecked] = React.useState(false)
 
   return (
-    <FormControlLabel
-      control={
-        <Checkbox
-          checked={checked}
-          color="default"
-          onChange={() => setChecked(!checked)}
-        />
-      }
-      label={children}
-    />
+    <div
+      style={{
+        cursor: 'pointer',
+        textDecoration: checked ? 'line-through' : 'none',
+        borderLeft: checked ? `6px solid #000` : null,
+        // paddingLeft: checked ? 10 : 16,
+        paddingLeft: checked ? 18 : 24,
+      }}
+      onClick={() => setChecked(!checked)}
+    >
+      <Typography
+        variant="body1"
+        style={{ lineHeight: 1.777, paddingBottom: 9 }}
+      >
+        {children}
+      </Typography>
+    </div>
   )
 }
 
@@ -49,9 +56,11 @@ const Ingredients = ({ ingredients }) => (
     <Typography variant="h4" component="h2" gutterBottom>
       Ingredients
     </Typography>
-    {ingredients.map((ingredient) => (
-      <Ingredient>{ingredient}</Ingredient>
-    ))}
+    <div style={{ borderLeft: `1px solid #000` }}>
+      {ingredients.map((ingredient) => (
+        <Ingredient>{ingredient}</Ingredient>
+      ))}
+    </div>
   </>
 )
 
@@ -122,18 +131,12 @@ const RecipeTemplate = ({ data }) => {
       <Box mb={4}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={4}>
-            <Paper style={{ backgroundColor: '#f9f9f9' }} square>
-              <Box padding={2}>
-                {ingredients.length !== 0 && (
-                  <Ingredients ingredients={ingredients} />
-                )}
-              </Box>
-            </Paper>
+            {ingredients.length !== 0 && (
+              <Ingredients ingredients={ingredients} />
+            )}
           </Grid>
           <Grid item xs={12} md={8}>
-            <Box padding={2}>
-              {steps.length !== 0 && <Steps steps={steps} />}
-            </Box>
+            {steps.length !== 0 && <Steps steps={steps} />}
           </Grid>
         </Grid>
       </Box>
