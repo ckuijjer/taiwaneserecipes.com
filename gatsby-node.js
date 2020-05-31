@@ -4,7 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Recipe`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
@@ -21,7 +21,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const result = await graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allRecipe(limit: 1000) {
         edges {
           node {
             fields {
@@ -39,7 +39,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allRecipe.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: RecipeTemplate,

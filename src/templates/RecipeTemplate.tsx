@@ -57,36 +57,76 @@ const Images = ({ images = [] }) => {
 
 const RecipeTemplate = ({ data }) => {
   const {
-    markdownRemark: { htmlAst, frontmatter, children },
+    recipe,
     site: {
       siteMetadata: { author, siteUrl },
     },
   } = data
 
-  const images = frontmatter?.images ?? []
-  const featuredImage = frontmatter?.featuredImage
-  const recipeMetadata = children[0]
-  const { title } = recipeMetadata
-  const totalTime = frontmatter?.totalTime
-  const category = frontmatter?.category
+  const {
+    featuredImage,
+    title,
+    totalTime,
+    category,
+    steps = [],
+    ingredients = [],
+  } = recipe
+
+  const images = recipe.images ?? []
 
   return (
     <Layout>
       <SEO title={title} />
       <RecipeLinkedData
-        {...recipeMetadata}
         featuredImage={featuredImage}
         images={images}
         siteUrl={siteUrl}
         author={author}
         category={category}
+        title={title}
+        steps={steps}
+        ingredients={ingredients}
         totalTime={totalTime}
       />
-      <Typography variant="h2" style={{ marginBottom: 32 }}>
+      <Typography variant="h2" component="h1" style={{ marginBottom: 32 }}>
         {title}
       </Typography>
-      <Hero title={title} image={featuredImage} style={{ marginBottom: 32 }} />
-      {renderAst(htmlAst)}
+      {featuredImage && (
+        <Hero image={featuredImage} style={{ marginBottom: 32 }} />
+      )}
+      {ingredients.length !== 0 && (
+        <>
+          <Typography variant="h4" component="h2" gutterBottom>
+            Ingredients
+          </Typography>
+          <ul>
+            {ingredients.map((ingredient) => (
+              <li>
+                <Typography variant="body1" gutterBottom>
+                  {ingredient}
+                </Typography>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+
+      {steps.length !== 0 && (
+        <>
+          <Typography variant="h4" component="h2" gutterBottom>
+            Steps
+          </Typography>
+          <ol>
+            {steps.map((step) => (
+              <li>
+                <Typography variant="body1" gutterBottom>
+                  {step}
+                </Typography>
+              </li>
+            ))}
+          </ol>
+        </>
+      )}
       <Images images={images} />
     </Layout>
   )
@@ -100,38 +140,31 @@ export const pageQuery = graphql`
         siteUrl
       }
     }
-    markdownRemark(fields: { slug: { eq: $path } }) {
-      htmlAst
+    recipe(fields: { slug: { eq: $path } }) {
       fields {
         slug
       }
-      frontmatter {
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
+      featuredImage {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
           }
         }
-        images {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
+      }
+      images {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
           }
         }
-        totalTime
-        prepTime
-        cookTime
-        category
       }
-      children {
-        ... on Recipe {
-          title
-          ingredients
-          steps
-        }
-      }
+      totalTime
+      prepTime
+      cookTime
+      category
+      title
+      ingredients
+      steps
     }
   }
 `

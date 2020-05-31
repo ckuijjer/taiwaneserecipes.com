@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box'
 import Paper from '@material-ui/core/Paper'
 import Img from 'gatsby-image'
 
-const Hero = ({ title, image, style = {} }) => (
+const Hero = ({ image, style = {} }) => (
   <div style={{ ...style, padding: 0, height: 400, position: 'relative' }}>
     <Img
       fluid={image?.childImageSharp?.fluid}

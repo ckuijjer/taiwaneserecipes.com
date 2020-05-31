@@ -28,6 +28,7 @@ exports.onCreateNode = async ({
     .map(toString)
 
   const recipe = {
+    ...node.frontmatter,
     title,
     steps,
     ingredients,

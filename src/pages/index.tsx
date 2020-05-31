@@ -17,32 +17,28 @@ const IndexPage = () => {
           siteUrl
         }
       }
-      allMarkdownRemark(limit: 1000, sort: { fields: fields___slug }) {
+      allRecipe(limit: 1000, sort: { fields: fields___slug }) {
         edges {
           node {
-            headings(depth: h1) {
-              value
-            }
             fields {
               slug
             }
-            frontmatter {
-              prepTime
-              cookTime
-              totalTime
-              category
-              featuredImage {
-                childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
-                  }
+            title
+            prepTime
+            cookTime
+            totalTime
+            category
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
                 }
               }
-              images {
-                childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
-                  }
+            }
+            images {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -52,15 +48,13 @@ const IndexPage = () => {
     }
   `)
 
-  const recipes = data.allMarkdownRemark.edges
+  const recipes = data.allRecipe.edges
     .map(({ node }) => ({
-      title: node.headings[0].value,
+      ...node,
       path: node.fields.slug,
       image:
-        node.frontmatter?.featuredImage?.childImageSharp?.fluid ||
-        node.frontmatter?.images?.[0].childImageSharp?.fluid,
-      category: node.frontmatter?.category,
-      totalTime: node.frontmatter?.totalTime,
+        node.featuredImage?.childImageSharp?.fluid ||
+        node.images?.[0].childImageSharp?.fluid,
     }))
     .sort((
       a,
