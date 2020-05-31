@@ -83,6 +83,15 @@ const theme = createMuiTheme({
   shadows,
   overrides: {
     MuiAppBar: {},
+    MuiFormControlLabel: {
+      root: {
+        alignItems: 'flex-start',
+      },
+      label: {
+        paddingTop: 9,
+        paddingBottom: 9,
+      },
+    },
   },
 })
 

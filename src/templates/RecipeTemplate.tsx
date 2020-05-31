@@ -5,11 +5,13 @@ import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Box from '@material-ui/core/Box'
+import Checkbox from '@material-ui/core/Checkbox'
 
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import RecipeLinkedData from '../components/RecipeLinkedData'
 import Hero from '../components/Hero'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
 
 const Images = ({ images = [] }) => {
   return (
@@ -24,6 +26,55 @@ const Images = ({ images = [] }) => {
     </Grid>
   )
 }
+
+const Ingredient = ({ children }) => {
+  const [checked, setChecked] = React.useState(false)
+
+  return (
+    <FormControlLabel
+      control={
+        <Checkbox
+          checked={checked}
+          color="default"
+          onChange={() => setChecked(!checked)}
+        />
+      }
+      label={children}
+    />
+  )
+}
+
+const Ingredients = ({ ingredients }) => (
+  <>
+    <Typography variant="h4" component="h2" gutterBottom>
+      Ingredients
+    </Typography>
+    {ingredients.map((ingredient) => (
+      <Ingredient>{ingredient}</Ingredient>
+    ))}
+  </>
+)
+
+const Steps = ({ steps }) => (
+  <>
+    <Typography variant="h4" component="h2" gutterBottom>
+      Steps
+    </Typography>
+    <ol style={{ paddingLeft: 24 }}>
+      {steps.map((step) => (
+        <li>
+          <Typography
+            variant="body1"
+            gutterBottom
+            style={{ lineHeight: 1.777, marginBottom: 12 }}
+          >
+            {step}
+          </Typography>
+        </li>
+      ))}
+    </ol>
+  </>
+)
 
 const RecipeTemplate = ({ data }) => {
   const {
@@ -74,42 +125,14 @@ const RecipeTemplate = ({ data }) => {
             <Paper style={{ backgroundColor: '#f9f9f9' }} square>
               <Box padding={2}>
                 {ingredients.length !== 0 && (
-                  <>
-                    <Typography variant="h4" component="h2" gutterBottom>
-                      Ingredients
-                    </Typography>
-                    <ul style={{ paddingLeft: 40 }}>
-                      {ingredients.map((ingredient) => (
-                        <li>
-                          <Typography variant="body1" gutterBottom>
-                            {ingredient}
-                          </Typography>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
+                  <Ingredients ingredients={ingredients} />
                 )}
               </Box>
             </Paper>
           </Grid>
           <Grid item xs={12} md={8}>
             <Box padding={2}>
-              {steps.length !== 0 && (
-                <>
-                  <Typography variant="h4" component="h2" gutterBottom>
-                    Steps
-                  </Typography>
-                  <ol style={{ paddingLeft: 40 }}>
-                    {steps.map((step) => (
-                      <li>
-                        <Typography variant="body1" gutterBottom>
-                          {step}
-                        </Typography>
-                      </li>
-                    ))}
-                  </ol>
-                </>
-              )}
+              {steps.length !== 0 && <Steps steps={steps} />}
             </Box>
           </Grid>
         </Grid>
