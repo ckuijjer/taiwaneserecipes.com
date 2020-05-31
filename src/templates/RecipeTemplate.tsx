@@ -1,45 +1,15 @@
 import React from 'react'
-import { graphql, withPrefix } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import rehypeReact from 'rehype-react'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
+import Box from '@material-ui/core/Box'
 
 import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import RecipeLinkedData from '../components/RecipeLinkedData'
 import Hero from '../components/Hero'
-
-const H1 = () => null
-// const H1 = ({ children }) => (
-//   <Typography variant="h2" component="h1" gutterBottom>
-//     {children}
-//   </Typography>
-// )
-const H2 = ({ children }) => (
-  <Typography variant="h4" component="h2" gutterBottom>
-    {children}
-  </Typography>
-)
-const P = ({ children }) => <Typography variant="body1">{children}</Typography>
-const Li = ({ children }) => (
-  <li>
-    <Typography variant="body1" gutterBottom>
-      {children}
-    </Typography>
-  </li>
-)
-
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: {
-    h1: H1,
-    h2: H2,
-    p: P,
-    li: Li,
-  },
-}).Compiler
 
 const Images = ({ images = [] }) => {
   return (
@@ -88,45 +58,62 @@ const RecipeTemplate = ({ data }) => {
         ingredients={ingredients}
         totalTime={totalTime}
       />
-      <Typography variant="h2" component="h1" style={{ marginBottom: 32 }}>
-        {title}
-      </Typography>
+      <Box mb={4}>
+        <Typography variant="h2" component="h1">
+          {title}
+        </Typography>
+      </Box>
       {featuredImage && (
-        <Hero image={featuredImage} style={{ marginBottom: 32 }} />
+        <Box mb={6}>
+          <Hero image={featuredImage} />
+        </Box>
       )}
-      {ingredients.length !== 0 && (
-        <>
-          <Typography variant="h4" component="h2" gutterBottom>
-            Ingredients
-          </Typography>
-          <ul>
-            {ingredients.map((ingredient) => (
-              <li>
-                <Typography variant="body1" gutterBottom>
-                  {ingredient}
-                </Typography>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-
-      {steps.length !== 0 && (
-        <>
-          <Typography variant="h4" component="h2" gutterBottom>
-            Steps
-          </Typography>
-          <ol>
-            {steps.map((step) => (
-              <li>
-                <Typography variant="body1" gutterBottom>
-                  {step}
-                </Typography>
-              </li>
-            ))}
-          </ol>
-        </>
-      )}
+      <Box mb={4}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={4}>
+            <Paper style={{ backgroundColor: '#f9f9f9' }} square>
+              <Box padding={2}>
+                {ingredients.length !== 0 && (
+                  <>
+                    <Typography variant="h4" component="h2" gutterBottom>
+                      Ingredients
+                    </Typography>
+                    <ul style={{ paddingLeft: 40 }}>
+                      {ingredients.map((ingredient) => (
+                        <li>
+                          <Typography variant="body1" gutterBottom>
+                            {ingredient}
+                          </Typography>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </Box>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} md={8}>
+            <Box padding={2}>
+              {steps.length !== 0 && (
+                <>
+                  <Typography variant="h4" component="h2" gutterBottom>
+                    Steps
+                  </Typography>
+                  <ol style={{ paddingLeft: 40 }}>
+                    {steps.map((step) => (
+                      <li>
+                        <Typography variant="body1" gutterBottom>
+                          {step}
+                        </Typography>
+                      </li>
+                    ))}
+                  </ol>
+                </>
+              )}
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
       <Images images={images} />
     </Layout>
   )
