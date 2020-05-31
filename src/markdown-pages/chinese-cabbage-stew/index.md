@@ -42,13 +42,13 @@ category: Main Dish
 
 ## Steps
 
-- Soak the shitake and ear mushroom in water for 15 mins.
-- Wash and cut the chinese cabbage in to 3cm parts.
-- Slice the carrots into 2-3mm thick and 3cm parts.
-- Slice the garlic and shitake into thin slices.
-- Heat oil in a pot, throw in shitake, garlic and carrots.
-- Stir fry for few minutes and throw in the cabbage and mushroom ears.
-- Add about 3 tablespoon of soy sauce and ½ cup of water, cover and cook for 15 mins in medium low fire.
-- Stir once in a while to make sure all ingrediants are well cooked.
-- In a small bowl mix tapioca powder with ½ cup of cold water until no clumps.
-- Stir in the starch mix and after a few minutes it's ready to serve!
+1. Soak the shitake and ear mushroom in water for 15 mins.
+1. Wash and cut the chinese cabbage in to 3cm parts.
+1. Slice the carrots into 2-3mm thick and 3cm parts.
+1. Slice the garlic and shitake into thin slices.
+1. Heat oil in a pot, throw in shitake, garlic and carrots.
+1. Stir fry for few minutes and throw in the cabbage and mushroom ears.
+1. Add about 3 tablespoon of soy sauce and ½ cup of water, cover and cook for 15 mins in medium low fire.
+1. Stir once in a while to make sure all ingrediants are well cooked.
+1. In a small bowl mix tapioca powder with ½ cup of cold water until no clumps.
+1. Stir in the starch mix and after a few minutes it's ready to serve!
