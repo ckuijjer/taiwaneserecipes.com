@@ -39,6 +39,7 @@ category: Main Dish
 - 1 tablespoon of Tapioca powder or Corn starch
 - Salt to taste
 - Soy sauce to taste
+- some Oil
 
 ## Steps
 
