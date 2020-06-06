@@ -33,8 +33,8 @@ category: Main Dish
 
 - ½ Chinese cabbage
 - 3 Dried shitake mushroom
-- 5-10 Black fungus/ear mushroom
-- 1 medium size Carrot
+- 10-15 Black fungus/ear mushroom
+- 1 or 2 medium size Carrots
 - 3 cloves of Garlic
 - 1 tablespoon of Tapioca powder or Corn starch
 - Salt to taste
@@ -42,7 +42,7 @@ category: Main Dish
 
 ## Steps
 
-1. Soak the shitake and ear mushroom in water for 15 mins.
+1. Soak the shitake and ear mushroom in warm water for 15 mins.
 1. Wash and cut the chinese cabbage in to 3cm parts.
 1. Slice the carrots into 2-3mm thick and 3cm parts.
 1. Slice the garlic and shitake into thin slices.
