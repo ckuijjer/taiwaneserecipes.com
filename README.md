@@ -1,3 +1,3 @@
-# recipes
+# Taiwanese Recipes
 
-https://ckuijjer.github.com/recipes
+See http://taiwaneserecipes.com
