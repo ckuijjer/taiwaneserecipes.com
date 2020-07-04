@@ -24,12 +24,12 @@ category: Starter/Side dish
 - 5 Star anise
 - 0.5 cup of Soy sauce
 - 5g Sichuan pepper
-- 40g Brown sugar
+- 30g Brown sugar
 
 ## Steps
 
 1. Wash the eggs carefully
-1. Boil the eggs until well done(more than 10 mins)
+1. Boil the eggs until well done (more than 10 mins, and stir once in a while to make sure the inside doesn't get air bubbles)
 1. Make 500ml black tea with tea leaves or tea bag
 1. Add soy sauce, star anise, brown sugar and Sichuan pepper to the tea
 1. Cool the eggs and break the shell gently with a spoon
