@@ -1,3 +1,11 @@
+---
+featuredImage: IMG_6102.jpeg
+images:
+  - IMG_6101.jpeg
+  - IMG_6102.jpeg
+category: Main Dish
+---
+
 # Salted Eggs with Bitter Melon
 
 ## Ingredients
