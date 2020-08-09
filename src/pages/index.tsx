@@ -66,6 +66,7 @@ const IndexPage = () => {
         ? -1
         : 1,
     )
+    .filter((x) => !!x.image) // only keep the ones with an image (as google's rich text caroussel needs all items to be valid and a Recipe needs an image)
 
   return (
     <Layout>
