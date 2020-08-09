@@ -1,8 +1,15 @@
 ---
-featuredImage: IMG_6102.jpeg
+featuredImage: IMG_0148.jpg
 images:
+  - IMG_0140.jpg
+  - IMG_0144.jpg
+  - IMG_0145.jpg
+  - IMG_0143.jpg
+  - IMG_0146.jpg
   - IMG_6101.jpeg
   - IMG_6102.jpeg
+  - IMG_0148.jpg
+  - IMG_0150.jpg
 category: Main Dish
 ---
 
