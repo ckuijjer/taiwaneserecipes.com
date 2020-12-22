@@ -3,15 +3,6 @@ import grey from '@material-ui/core/colors/grey'
 
 import shadows from './shadows'
 
-// export const colors = {
-//   primary: '#ffc917',
-//   secondary: '#0063d3',
-//   secondaryDark: '#003082',
-//   textColor: '#070721',
-//   error: '#db0029',
-//   grey: '#e6e6e9',
-// }
-
 // A custom theme for this app
 const theme = createMuiTheme({
   palette: {
