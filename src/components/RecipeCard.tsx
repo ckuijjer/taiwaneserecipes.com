@@ -27,8 +27,9 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
     borderRadius: 4,
   },
-  cardRoot: {
+  cardContent: {
     flex: 1,
+    paddingTop: 0,
   },
 }))
 
@@ -42,7 +43,7 @@ const RecipeCard = ({ title, path, image, totalTime, category }) => {
         className={classes.actionArea}
       >
         <CardMedia className={classes.media} image={image && image.src} />
-        <CardContent className={classes.cardRoot}>
+        <CardContent className={classes.cardContent}>
           <Typography variant="subtitle2" gutterBottom>
             {category ? category : <>&nbsp;</>}
           </Typography>

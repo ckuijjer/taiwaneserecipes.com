@@ -75,7 +75,12 @@ const IndexPage = () => {
         recipes={recipes}
         siteUrl={data?.site?.siteMetadata?.siteUrl}
       />
-      <Grid container spacing={2} alignItems="stretch">
+      <Grid
+        container
+        spacing={0}
+        alignItems="stretch"
+        style={{ marginBottom: 32 }}
+      >
         {recipes.map((props) => (
           <Grid item container xs={12} md={4} key={props.path}>
             <RecipeCard {...props} />
