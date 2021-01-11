@@ -1,8 +1,28 @@
 ---
-featuredImage: IMG_4889.jpeg
+featuredImage: IMG_0234.jpeg
 images:
-  - IMG_4889.jpeg
-  - IMG_4890.jpeg
+  - IMG_0200.jpeg
+  - IMG_0201.jpeg
+  - IMG_0202.jpeg
+  - IMG_0203.jpeg
+  - IMG_0204.jpeg
+  - IMG_0205.jpeg
+  - IMG_0206.jpeg
+  - IMG_0207.jpeg
+  - IMG_0208.jpeg
+  - IMG_0218.jpeg
+  - IMG_0219.jpeg
+  - IMG_0221.jpeg
+  - IMG_0222.jpeg
+  - IMG_0225.jpeg
+  - IMG_0226.jpeg
+  - IMG_0227.jpeg
+  - IMG_0228.jpeg
+  - IMG_0229.jpeg
+  - IMG_0230.jpeg
+  - IMG_0231.jpeg
+  - IMG_0233.jpeg
+  - IMG_0234.jpeg
 category: Main Dish
 ---
 

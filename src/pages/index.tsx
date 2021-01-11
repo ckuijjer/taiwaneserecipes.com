@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/Seo'
 import RecipeCard from '../components/RecipeCard'
 import { withPrefix } from 'gatsby'
+import Box from '@material-ui/core/Box'
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -42,6 +43,7 @@ const IndexPage = () => {
                 }
               }
             }
+            draft
           }
         }
       }
@@ -66,7 +68,7 @@ const IndexPage = () => {
         ? -1
         : 1,
     )
-    .filter((x) => !!x.image) // only keep the ones with an image (as google's rich text caroussel needs all items to be valid and a Recipe needs an image)
+    .filter((x) => !x.draft) // only keep the ones that are not draft (as google's rich text caroussel needs all items to be valid and a Recipe needs an image)
 
   return (
     <Layout>
@@ -75,18 +77,15 @@ const IndexPage = () => {
         recipes={recipes}
         siteUrl={data?.site?.siteMetadata?.siteUrl}
       />
-      <Grid
-        container
-        spacing={0}
-        alignItems="stretch"
-        style={{ marginBottom: 32 }}
-      >
-        {recipes.map((props) => (
-          <Grid item container xs={12} md={4} key={props.path}>
-            <RecipeCard {...props} />
-          </Grid>
-        ))}
-      </Grid>
+      <Box marginLeft={-2} marginRight={-2}>
+        <Grid container spacing={0} alignItems="stretch">
+          {recipes.map((props) => (
+            <Grid item container xs={12} sm={6} md={4} key={props.path}>
+              <RecipeCard {...props} />
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </Layout>
   )
 }

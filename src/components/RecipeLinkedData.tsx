@@ -14,6 +14,7 @@ type Recipe = {
   totalTime: string
   prepTime: string
   cookTime: string
+  draft: boolean
 }
 
 const RecipeLinkedData = ({

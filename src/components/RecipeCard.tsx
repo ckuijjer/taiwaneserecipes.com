@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'stretch',
+    paddingBottom: 16,
   },
   media: {
     height: 180,

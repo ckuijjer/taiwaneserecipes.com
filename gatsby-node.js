@@ -27,6 +27,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             fields {
               slug
             }
+            draft
           }
         }
       }
@@ -40,10 +41,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   }
 
   result.data.allRecipe.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: RecipeTemplate,
-      context: {}, // additional data can be passed via context
-    })
+    if (!node.draft) {
+      createPage({
+        path: node.fields.slug,
+        component: RecipeTemplate,
+        context: {}, // additional data can be passed via context
+      })
+    }
   })
 }

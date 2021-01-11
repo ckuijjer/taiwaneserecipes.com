@@ -20,7 +20,9 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Container maxWidth="md">
-        <Box marginTop={4}>{children}</Box>
+        <Box marginTop={4} marginBottom={4}>
+          {children}
+        </Box>
       </Container>
     </>
   )

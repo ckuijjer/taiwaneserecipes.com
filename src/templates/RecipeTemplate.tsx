@@ -27,7 +27,7 @@ const Images = ({ images = [] }) => {
   )
 }
 
-const Ingredient = ({ children }) => {
+const Checkable = ({ children }) => {
   const [checked, setChecked] = React.useState(false)
 
   return (
@@ -35,19 +35,20 @@ const Ingredient = ({ children }) => {
       style={{
         cursor: 'pointer',
         textDecoration: checked ? 'line-through' : 'none',
-        borderLeft: checked ? `6px solid #000` : null,
-        // paddingLeft: checked ? 10 : 16,
-        paddingLeft: checked ? 18 : 24,
+        color: checked ? '#999' : null,
       }}
       onClick={() => setChecked(!checked)}
     >
-      <Typography
-        variant="body1"
-        style={{ lineHeight: 1.777, paddingBottom: 9 }}
-      >
-        {children}
-      </Typography>
+      {children}
     </div>
+  )
+}
+
+const Ingredient = ({ children }) => {
+  return (
+    <Typography variant="body1" gutterBottom>
+      {children}
+    </Typography>
   )
 }
 
@@ -56,11 +57,21 @@ const Ingredients = ({ ingredients }) => (
     <Typography variant="h4" component="h2" gutterBottom>
       Ingredients
     </Typography>
-    <div style={{ borderLeft: `1px solid #000` }}>
+    <ul style={{ listStyle: 'none', marginLeft: 0, paddingLeft: 0 }}>
       {ingredients.map((ingredient) => (
-        <Ingredient>{ingredient}</Ingredient>
+        <Checkable>
+          <li>
+            <Typography
+              variant="body1"
+              gutterBottom
+              style={{ lineHeight: 1.777, marginBottom: 14 }}
+            >
+              {ingredient}
+            </Typography>
+          </li>
+        </Checkable>
       ))}
-    </div>
+    </ul>
   </>
 )
 
@@ -71,15 +82,14 @@ const Steps = ({ steps }) => (
     </Typography>
     <ol style={{ paddingLeft: 24 }}>
       {steps.map((step) => (
-        <li>
+        <Checkable>
           <Typography
             variant="body1"
-            gutterBottom
-            style={{ lineHeight: 1.777, marginBottom: 12 }}
+            style={{ lineHeight: 1.777, marginBottom: 14 }}
           >
-            {step}
+            <li>{step}</li>
           </Typography>
-        </li>
+        </Checkable>
       ))}
     </ol>
   </>
