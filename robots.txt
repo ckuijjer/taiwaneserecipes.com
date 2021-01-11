@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.taiwaneserecipes.com/sitemap.xml
+Host: https://www.taiwaneserecipes.com
