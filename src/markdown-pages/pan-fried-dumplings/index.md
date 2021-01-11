@@ -1,6 +1,5 @@
 ---
-draft: true
-featuredImage: IMG_6900.jpeg
+featuredImage: IMG_6061.jpeg
 images:
   - IMG_6900.jpeg
   - IMG_0247.jpeg
