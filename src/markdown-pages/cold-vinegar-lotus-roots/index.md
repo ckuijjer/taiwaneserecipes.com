@@ -22,7 +22,7 @@ category: Starter/Side dish
 
 - 1 Lotus root (300g)
 - 1 small Chilis
-- 1 toes of Garlic
+- 1 clove of Garlic
 - Cilantro
 - 60ml Vinegar
 - ½ teaspoon of Salt
