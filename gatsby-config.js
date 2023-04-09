@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Taiwanese Recipes`,
-    description: `Taiwanese Recipes`,
+    title: `🇹🇼 Taiwanese Recipes`,
+    description: `🇳🇱 Taiwanese Recipes`,
     author: `Yi-An Lai & Casper Kuijjer`,
     siteUrl: 'https://www.taiwaneserecipes.com',
   },

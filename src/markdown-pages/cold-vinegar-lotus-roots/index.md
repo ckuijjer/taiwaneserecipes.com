@@ -21,10 +21,10 @@ category: Starter/Side dish
 ## Ingredients
 
 - 1 Lotus root (300g)
-- 2 small Chilis
-- 2 toes of Garlic
+- 1 small Chilis
+- 1 toes of Garlic
 - Cilantro
-- 40ml Vinegar
+- 60ml Vinegar
 - ½ teaspoon of Salt
 - 1 teaspoon of Sesame oil
 
