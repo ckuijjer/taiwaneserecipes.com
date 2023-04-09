@@ -19,7 +19,7 @@ category: Main Dish
 
 - 1 Bitter melon
 - 2 Salted eggs
-- 4 toes of Garlics
+- 4 cloves of Garlics
 - Salt
 
 ## Steps
